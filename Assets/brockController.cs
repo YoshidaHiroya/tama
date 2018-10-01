@@ -1,19 +1,59 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
+public class brockController : MonoBehaviour
+{
+	public float speed = 20; // 動く速さ
+	public Text counttext;
+	public Text wintext;
+	public int jumpcount;
 
-public class brockController : MonoBehaviour {
+	private Rigidbody rb; // Rididbody
+	 int count ;
+	void Start()
+	{
+		// Rigidbody を取得
+		rb = GetComponent<Rigidbody>();
+		count = 0;
+		wintext.text = "";
+		jumpcount = 0;
+	}
 
-	// Use this for initialization
-	void Start () {
-		
+	void Update()
+	{
+		// カーソルキーの入力を取得
+		var moveHorizontal = Input.GetAxis("Horizontal");
+		var moveVertical = Input.GetAxis("Vertical");
+
+		// カーソルキーの入力に合わせて移動方向を設定
+		var movement = new Vector3(moveVertical, 0, -moveHorizontal);
+
+		// Ridigbody に力を与えて玉を動かす
+		rb.AddForce(movement * speed);
+		if (Input.GetKeyDown ("space") == true && jumpcount < 2) {
+			this.gameObject.GetComponent<Rigidbody> ().velocity = new Vector3 (0, speed, 0);
+			jumpcount += 1;
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-	void OnCollisionEnter(Collision collision){
-		Destroy(gameObject);
+	void OnTriggerEnter(Collider col){
+		if (col.gameObject.tag == "PickUp") {
+			Destroy (col.gameObject);
+			count=count + 1;
+			Debug.Log ("kaunto");
+			counttext.text = "Count:" + count.ToString();
+			if (count >= 8) {
+				wintext.text="YouWin!";
+			}
+
+		}
+			if (col.gameObject.tag == "Ground") 
+			{
+				wintext.text="GameOver!";
+			}
+		if (col.gameObject.tag == "Wall") 
+		{
+			jumpcount = 0;
+		}
+
+
 	}
 }

@@ -52,7 +52,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\brockController.cs" />
+     <Compile Include="Assets\CameraScript.cs" />
      <Compile Include="Assets\paddleController.cs" />
+     <Compile Include="Assets\PickUpManager.cs" />
+     <Compile Include="Assets\Rotor.cs" />
      <Compile Include="Assets\sphereController.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
