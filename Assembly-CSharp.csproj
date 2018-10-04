@@ -51,12 +51,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\brockController.cs" />
-     <Compile Include="Assets\CameraScript.cs" />
-     <Compile Include="Assets\paddleController.cs" />
-     <Compile Include="Assets\PickUpManager.cs" />
-     <Compile Include="Assets\Rotor.cs" />
-     <Compile Include="Assets\sphereController.cs" />
+     <Compile Include="Assets\Script\ballController.cs" />
+     <Compile Include="Assets\Script\blockController.cs" />
+     <Compile Include="Assets\Script\brockController.cs" />
+     <Compile Include="Assets\Script\CameraScript.cs" />
+     <Compile Include="Assets\Script\paddleController.cs" />
+     <Compile Include="Assets\Script\PadleController.cs" />
+     <Compile Include="Assets\Script\PickUpManager.cs" />
+     <Compile Include="Assets\Script\Rotor.cs" />
+     <Compile Include="Assets\Script\sphereController.cs" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
