@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\audio.cs" />
      <Compile Include="Assets\Script\ballController.cs" />
      <Compile Include="Assets\Script\blockController.cs" />
      <Compile Include="Assets\Script\brockController.cs" />
