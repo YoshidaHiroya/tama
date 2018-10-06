@@ -14,7 +14,7 @@ public class enemymanager : MonoBehaviour {
 	void Update () {
 		time += Time.deltaTime;
 		if (time > 1.0f) {
-			Instantiate (enemy, new Vector3(Random.Range(0,20),0,0) , Quaternion.identity);
+			Instantiate (enemy, new Vector3(Random.Range(0,20),0,(Random.Range(0,20))) , Quaternion.identity);
 			time = 0.0f;
 		}
 

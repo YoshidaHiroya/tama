@@ -11,9 +11,9 @@ public class enemycontroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position += new Vector3 (0,0,speed*Time.deltaTime);
-		if(this.transform.position.z>25.0f){
-			Destroy (gameObject);
+		this.transform.position +=  this.transform.forward*speed*Time.deltaTime;
+		//this.transform.Rotate(new Vector3(15,40,90)*Time.deltaTime);
+			Destroy (gameObject,4);
 	}
 }
-}
+
