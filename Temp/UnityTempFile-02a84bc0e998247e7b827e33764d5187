@@ -101,6 +101,8 @@
 -define:ENABLE_NATIVE_ARRAY_CHECKS
 -define:UNITY_TEAM_LICENSE
 'Assets/audio.cs'
+'Assets/enemycontroller.cs'
+'Assets/enemymanager.cs'
 'Assets/Script/ballController.cs'
 'Assets/Script/blockController.cs'
 'Assets/Script/brockController.cs'

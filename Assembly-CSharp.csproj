@@ -52,6 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\audio.cs" />
+     <Compile Include="Assets\enemycontroller.cs" />
+     <Compile Include="Assets\enemycontroller1.cs" />
+     <Compile Include="Assets\enemymanager.cs" />
      <Compile Include="Assets\Script\ballController.cs" />
      <Compile Include="Assets\Script\blockController.cs" />
      <Compile Include="Assets\Script\brockController.cs" />
